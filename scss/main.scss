@@ -1,95 +1,248 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
-.container{
-    max-width: 1280px;
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-}
-img{
-    max-width: 100%;
-    min-height: 100%;
+.container {
+  max-width: 1280px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-
-
-.product{
-    padding: 60px 0;
-    &-wrapper{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
-    }
-    &-card{
-        border: 1px solid #ddd;
-        &__image{
-            overflow: hidden;
-            &:hover img{
-                transform: scale(1.05);
-            }
-            img{
-                width: 100%;
-                transition: .3s;
-            }
-        }
-        &__body{
-            padding: 12px;
-            h3{
-                color: red;
-            }
-        }
-    }
-    @media (max-width:990px) {
-        &-wrapper{
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-    @media (max-width:600px) {
-        &-wrapper{
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
+ul li {
+  color: white;
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+input,
+button,
+select,
+textarea {
+  outline: none;
+  border: none;
+}
+img {
+  max-width: 100%;
+  min-height: 100%;
 }
 
+@import "header";
 
-.food{
-    padding: 60px 0;
-    &-wrapper{
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 12px;
+.product {
+  padding: 60px 0;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  &-card {
+    border: 1px solid #ddd;
+    &__image {
+      overflow: hidden;
+      &:hover img {
+        transform: scale(1.05);
+      }
+      img {
+        width: 100%;
+        transition: 0.3s;
+      }
     }
-    &-card{
-        border: 1px solid #ddd;
-        &__image{
-            overflow: hidden;
-            &:hover img{
-                transform: scale(1.05);
-            }
-            img{
-                width: 100%;
-                transition: .3s;
-            }
-        }
-        &__body{
-            padding: 12px;
-            h3{
-                color: red;
-            }
-        }
+    &__body {
+      padding: 12px;
+      h3 {
+        color: red;
+      }
     }
-    @media (max-width:990px) {
-        &-wrapper{
-            grid-template-columns: repeat(3, 1fr);
-        }
+  }
+  @media (max-width: 990px) {
+    &-wrapper {
+      grid-template-columns: repeat(3, 1fr);
     }
-    @media (max-width:600px) {
-        &-wrapper{
-            grid-template-columns: repeat(2, 1fr);
-        }
+  }
+  @media (max-width: 600px) {
+    &-wrapper {
+      grid-template-columns: repeat(2, 1fr);
     }
+  }
+  @media (max-width: 600px) {
+    &-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 }
+
+.food {
+  padding: 60px 0;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  &-card {
+    border: 1px solid #ddd;
+    &__image {
+      overflow: hidden;
+      &:hover img {
+        transform: scale(1.05);
+      }
+      img {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+    &__body {
+      padding: 12px;
+      h3 {
+        color: green;
+      }
+    }
+  }
+  @media (max-width: 990px) {
+    &-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    &-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 400px) {
+    &-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+.post {
+  padding: 60px 0;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  &-card {
+    border: 1px solid #ddd;
+    &__image {
+      overflow: hidden;
+      &:hover img {
+        transform: scale(1.05);
+      }
+      img {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+    &__body {
+      padding: 12px;
+      h3 {
+        color: red;
+      }
+    }
+  }
+  @media (max-width: 990px) {
+    &-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    &-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 400px) {
+    &-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+.comment {
+  padding: 60px 0;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  &-card {
+    border: 1px solid #ddd;
+    &__image {
+      overflow: hidden;
+      &:hover img {
+        transform: scale(1.05);
+      }
+      img {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+    &__body {
+      padding: 12px;
+      h3 {
+        color: red;
+      }
+    }
+  }
+  @media (max-width: 990px) {
+    &-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    &-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 400px) {
+    &-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+.user {
+  padding: 60px 0;
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+  &-card {
+    border: 1px solid #ddd;
+    &__image {
+      overflow: hidden;
+      &:hover img {
+        transform: scale(1.05);
+      }
+      img {
+        width: 100%;
+        transition: 0.3s;
+      }
+    }
+    &__body {
+      padding: 12px;
+      h3 {
+        color: red;
+      }
+    }
+  }
+  @media (max-width: 990px) {
+    &-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    &-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 400px) {
+    &-wrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
+
+@import "footer";

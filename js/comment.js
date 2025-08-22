@@ -15,24 +15,24 @@ function fetchData(endpoint, callback) {
     })
     .finally();
 }
-fetchData("/recipes", createFood);
-const foodWrapperEl = document.querySelector(".food-wrapper");
+fetchData("/comment", createFood);
+const commentWrapperEl = document.querySelector(".comment-wrapper");
 function createFood(data) {
-  data?.recipes?.forEach((item) => {
+  data?.comments?.forEach((item) => {
     const cardEl = document.createElement("div");
-    cardEl.className = "food-card";
+    cardEl.className = "comment-card";
 
     cardEl.innerHTML = `
-                    <div class="food-card">
-                <div class="food-card__image">
-                    <img loading="lazy" src="${item.image}" alt="">
+                    <div class="comment-card">
+                <div class="comment-card__image">
+                    <img loading="lazy" src="../assets/download.jpeg" alt="">
                 </div>
-                <div class="food-card__body">
-                    <h3>${item.name}</h3>
-                    <p>${item.caloriesPerServing} Kcal</p>
+                <div class="comment-card__body">
+                    <h3>@${item.user.username}</h3>
+                    <p>${item.body}</p>
                 </div>
             </div>
         `;
-    foodWrapperEl.appendChild(cardEl);
+    commentWrapperEl.appendChild(cardEl);
   });
 }
